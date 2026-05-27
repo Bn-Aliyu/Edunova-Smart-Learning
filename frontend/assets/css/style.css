@@ -95,11 +95,6 @@ select:focus {
   box-shadow: 0 0 0 3px rgba(81, 48, 229, 0.1);
 }
 
-input.input-error {
-  border-color: var(--danger);
-  animation: bounce 0.4s;
-}
-
 /* ============================================
    IMAGE STYLES
    ============================================ */
@@ -140,27 +135,4 @@ img {
 *:focus-visible {
   outline: 2px solid var(--primary);
   outline-offset: 2px;
-}
-
-/* ============================================
-   PRINT MEDIA
-   ============================================ */
-
-@media print {
-  .no-print,
-  .navbar,
-  .sidebar,
-  .footer,
-  button {
-    display: none !important;
-  }
-
-  body {
-    background: white;
-    color: black;
-  }
-
-  a {
-    text-decoration: underline;
-  }
 }

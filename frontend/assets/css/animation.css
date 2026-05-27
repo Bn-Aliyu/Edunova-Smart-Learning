@@ -357,6 +357,21 @@
   background-clip: text;
 }
 
+.text-wave {
+  display: inline-block;
+}
+
+.text-wave span {
+  display: inline-block;
+  animation: float 0.6s ease-in-out;
+}
+
+.text-wave span:nth-child(1) { animation-delay: 0s; }
+.text-wave span:nth-child(2) { animation-delay: 0.1s; }
+.text-wave span:nth-child(3) { animation-delay: 0.2s; }
+.text-wave span:nth-child(4) { animation-delay: 0.3s; }
+.text-wave span:nth-child(5) { animation-delay: 0.4s; }
+
 /* ============================================
    PAGE TRANSITIONS
    ============================================ */
@@ -367,6 +382,40 @@
 
 .page-exit {
   animation: fadeOut var(--transition-base) ease-in-out;
+}
+
+/* ============================================
+   NOTIFICATION ANIMATIONS
+   ============================================ */
+
+.toast-enter {
+  animation: slideUp var(--transition-base) ease-out;
+}
+
+.toast-exit {
+  animation: slideDown var(--transition-base) ease-in;
+}
+
+.alert-bounce {
+  animation: bounce var(--transition-base);
+}
+
+/* ============================================
+   FORM ANIMATIONS
+   ============================================ */
+
+.input-focus {
+  animation: slideUp 0.2s ease-out;
+}
+
+.input-error {
+  animation: bounce 0.4s;
+  border-color: var(--danger) !important;
+}
+
+.input-success {
+  animation: slideUp 0.3s ease-out;
+  border-color: var(--success) !important;
 }
 
 /* ============================================
@@ -382,3 +431,4 @@
 .stagger-item:nth-child(3) { animation-delay: 0.2s; }
 .stagger-item:nth-child(4) { animation-delay: 0.3s; }
 .stagger-item:nth-child(5) { animation-delay: 0.4s; }
+.stagger-item:nth-child(n+6) { animation-delay: 0.5s; }
